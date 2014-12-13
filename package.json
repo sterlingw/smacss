@@ -1,6 +1,6 @@
 {
   "name": "smacss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scaffold out a sass directory structure using the SMACSS format.",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sterlingw/smacss/issues"
+  },
+  "bin": {
+    "smacss": "./bin/smacss"
   },
   "dependencies": {},
   "devDependencies": {
