@@ -14,6 +14,12 @@ $ npm install smacss
 
 ## Example Usage
 
+Make sure you're in the right directory:
 ``` js
-var SMACSS = require('smacss');
+mkdir scss & cd scss
+```
+
+Run the command:
+``` js
+smacss
 ```

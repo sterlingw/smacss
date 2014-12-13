@@ -12,7 +12,7 @@
   },
   "keywords": ["sass","smacss","scaffold","css","less","compass"],
   "author": "Sterling Whitley",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sterlingw/smacss/issues"
   },
