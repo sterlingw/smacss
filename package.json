@@ -1,0 +1,23 @@
+{
+  "name": "smacss",
+  "version": "1.0.0",
+  "description": "Scaffold out a sass directory structure using the SMACSS format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sterlingw/smacss"
+  },
+  "keywords": ["sass","smacss","scaffold","css","less","compass"],
+  "author": "Sterling Whitley",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/sterlingw/smacss/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.17.0"
+  }
+}
