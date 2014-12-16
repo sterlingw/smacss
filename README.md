@@ -19,9 +19,9 @@ Make sure you're in the right directory:
 $ mkdir scss
 ```
 
-''' bash
+``` bash
 $ cd scss
-'''
+```
 
 Run the command:
 ``` js
