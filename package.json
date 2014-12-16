@@ -1,6 +1,6 @@
 {
   "name": "smacss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Scaffold out a sass directory structure using the SMACSS format.",
   "main": "index.js",
   "scripts": {
