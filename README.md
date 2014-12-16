@@ -15,9 +15,13 @@ $ npm install smacss
 ## Example Usage
 
 Make sure you're in the right directory:
-``` js
-mkdir scss & cd scss
+``` bash
+$ mkdir scss
 ```
+
+''' bash
+$ cd scss
+'''
 
 Run the command:
 ``` js
