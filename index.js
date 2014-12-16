@@ -21,7 +21,7 @@ module.exports = function () {
   create('base', 'base/_index.scss');
 
   // Layout
-  create('layout', 'layout/_index.scss')''
+  create('layout', 'layout/_index.scss');
 
   // Modules
   create('modules', 'modules/_index.scss');

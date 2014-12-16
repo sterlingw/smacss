@@ -17,7 +17,7 @@
     "url": "https://github.com/sterlingw/smacss/issues"
   },
   "bin": {
-    "smacss": "./bin/smacss"
+    "smacss": "index.js"
   },
   "dependencies": {},
   "devDependencies": {
