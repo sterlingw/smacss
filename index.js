@@ -4,61 +4,42 @@ module.exports = function () {
   // Create folders
   // ========================
 
-  // Base
-  fs.mkdir('base');
 
-  fs.writeFile('./base/_index.scss', '// Imports of base', function (err) {
-    console.log('Created base...');
-  });
+  // Create folder and _index.scss file
+  function create(directory, filepath) {
+    var comment = '// Imports of ' + ' ' + directory + '...';
+
+    fs.mkdir(directory);
+
+    fs.writeFile(filepath, comment, function (err) {
+      console.log('Created ' + 'directory' + '...');
+    });
+  }
+
+
+  // Base
+  create('base', 'base/_index.scss');
 
   // Layout
-  fs.mkdir('layout');
-
-  fs.writeFile('layout/_index.scss', '// Imports of layout', function (err) {
-    console.log('Created layout...');
-  });
+  create('layout', 'layout/_index.scss')''
 
   // Modules
-  fs.mkdir('modules');
-
-  fs.writeFile('modules/_index.scss', '// Imports of modules', function (err) {
-    console.log('Created modules...');
-  });
+  create('modules', 'modules/_index.scss');
 
   // Themes
-  fs.mkdir('themes');
-
-  fs.writeFile('themes/_index.scss', '// Imports of themes', function (err) {
-    console.log('Created themes...');
-  });
+  create('themes', 'themes/_index.scss');
 
   // States
-  fs.mkdir('states');
-
-  fs.writeFile('states/_index.scss', '// Imports of states', function (err) {
-    console.log('Created states...');
-  });
+  create('states', 'states/_index.scss');
 
   // Themes
-  fs.mkdir('themes');
-
-  fs.writeFile('themes/_index.scss', '// Imports of themes', function (err) {
-    console.log('Created themes...');
-  });
+  create('themes', 'themes/_index.scss');
 
   // Utilities
-  fs.mkdir('utilities');
-
-  fs.writeFile('utilities/_index.scss', '// Imports of utilities', function (err) {
-    console.log('Created base...');
-  });
+  create('utilities', 'utilities/_index.scss');
 
   // Utilites/Lib
-  fs.mkdir('utilities/lib/');
-
-  fs.writeFile('utilities/lib/_index.scss', '// Imports of utilities/lib', function (err) {
-    console.log('Created utilities/lib...');
-  });
+  create('utilities/lib/', 'utilities/lib/_index.scss');
 
   // App.scss
   fs.writeFile('app.scss', '// Imports of each directory', function (err) {
@@ -66,5 +47,5 @@ module.exports = function () {
   });
 
 
-  return 'Scaffolding...';
+  console.log('Scaffolding...');
 };
