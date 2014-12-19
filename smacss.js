@@ -1,4 +1,4 @@
-
+var fs = require('fs');
 
     // Create folder and _index.scss file
     exports.create = function(directory, filepath) {
