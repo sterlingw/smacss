@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var smacss = require('./smacss.js');
 var fs = require('fs');
 
