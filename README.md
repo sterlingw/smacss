@@ -27,3 +27,8 @@ Run the command:
 ``` js
 smacss
 ```
+
+License
+====================
+MIT
+
