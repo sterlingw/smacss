@@ -1,26 +1,34 @@
 {
   "name": "smacss",
-  "version": "1.0.5",
-  "description": "Scaffold out a sass directory structure using the SMACSS format.",
+  "version": "0.0.1",
+  "description": "~",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sterlingw/smacss"
+    "url": "github.com/sterlingw/smacss"
   },
-  "keywords": ["sass","smacss","scaffold","css","less","compass"],
+  "keywords": [
+    "background",
+    "background-changer",
+    "background",
+    "video"
+  ],
   "author": "Sterling Whitley",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sterlingw/smacss/issues"
-  },
-  "bin": {
-    "smacss": "index.js"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "mocha": "~1.17.0"
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-rename": "^1.2.2",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-browserify": "^4.2.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17"
   }
 }

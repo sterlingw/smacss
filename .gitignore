@@ -1,4 +1,4 @@
-*.swp
 .DS_Store
+.IDEA/
 node_modules/
 npm-debug.log
