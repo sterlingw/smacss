@@ -11,22 +11,35 @@ class SMACSS {
     }
 
 
-    scaffold() {
-        this.create("base");
-        this.create("config");
-        this.create("layout");
-        this.create("modules");
-        this.create("theme");
+    /**
+     *
+     */
+    createDir(dir) {
+        return new Promise(function(resolve, reject){
+            fs.mkdir(dir, function(){
+                resolve(dir);
+            });
+        });
     }
 
 
-    destroy() {
-        // use FS to remove dir
+    /**
+     *
+     */
+    createDirs(dirArray) {
+        dirArray.map(function(dir){
+            this.createDir(dir).then(function(dirName){
+                console.log("Created " + dirName + "...");
+            });
+        });
     }
 
 
-    create(dir) {
-        fs.mkdir(dir);
+    /**
+     *
+     */
+    removeDir(dir) {
+
     }
 
 

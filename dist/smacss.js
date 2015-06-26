@@ -1,6 +1,3 @@
-/**
- *
- */
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11,16 +8,50 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var fs = require("fs");
+
+/**
+ *
+ */
+
 var SMACSS = (function () {
     function SMACSS(args) {
         _classCallCheck(this, SMACSS);
-
-        console.log(args);
     }
 
     _createClass(SMACSS, [{
-        key: "scaffold",
-        value: function scaffold() {}
+        key: "createDir",
+
+        /**
+         *
+         */
+        value: function createDir(dir) {
+            return new Promise(function (resolve, reject) {
+                fs.mkdir(dir, function () {
+                    resolve(dir);
+                });
+            });
+        }
+    }, {
+        key: "createDirs",
+
+        /**
+         *
+         */
+        value: function createDirs(dirArray) {
+            dirArray.map(function (dir) {
+                this.createDir(dir).then(function (dirName) {
+                    console.log("Created " + dirName + "...");
+                });
+            });
+        }
+    }, {
+        key: "removeDir",
+
+        /**
+         *
+         */
+        value: function removeDir(dir) {}
     }]);
 
     return SMACSS;
@@ -30,5 +61,3 @@ var SMACSS = (function () {
 
 exports["default"] = SMACSS;
 module.exports = exports["default"];
-
-// use FS to create directories

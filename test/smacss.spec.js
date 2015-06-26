@@ -8,8 +8,8 @@ describe('SMACSS Class', ()=>{
         smacss = new SMACSS();
     });
 
-    describe('scaffold', ()=>{
-        it('should be true', ()=>{
+    describe('createDir', ()=>{
+        it('should return a promise', ()=>{
             expect(true).toBe(true);
         });
     });
