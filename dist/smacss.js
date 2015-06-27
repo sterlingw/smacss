@@ -44,6 +44,15 @@ var SMACSS = (function () {
 
             return new Promise(function (resolve, reject) {
                 dirArray.map(function (dir, i) {
+
+                    // Create utilities before utilities/lib if utilities isn't checked
+                    if (dir == "utilities/lib") {
+                        if (dirArray.indexOf("utilities") == -1) {
+                            console.log("Created " + "utilitites".green + "...");
+                            self.createDir("utilities");
+                        }
+                    }
+
                     self.createDir(dir).then(function (dirName) {
                         console.log("Created " + dirName.green + "...");
 
@@ -56,13 +65,6 @@ var SMACSS = (function () {
                 });
             });
         }
-    }, {
-        key: "removeDir",
-
-        /**
-         *
-         */
-        value: function removeDir(dir) {}
     }]);
 
     return SMACSS;

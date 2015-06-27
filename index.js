@@ -11,7 +11,8 @@ var scaffoldChoices = [
     { name: "modules", checked: true },
     { name: "states", checked: true },
     { name: "themes", checked: true },
-    { name: "utilities", checked: true }
+    { name: "utilities", checked: true },
+    { name: "utilities/lib", checked: true }
 ];
 
 
@@ -36,23 +37,6 @@ program.on('scaffold', function(){
     });
 });
 
-
-program.on('destroy', function(){
-    inquirer.prompt([{
-        type: "confirm",
-        message: "This will remove all SMACSS directories. Are you sure?",
-        name: "bool",
-        validate: function(answer) {
-            return true;
-        }
-    }], function(answer) {
-        if (answer.bool) {
-            console.log("\nDestroying...\n".red);
-        } else {
-            console.log("\nCancelling destroy.\n".green);
-        }
-    });
-});
 
 
 program.parse(process.argv);

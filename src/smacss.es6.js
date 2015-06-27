@@ -30,27 +30,30 @@ class SMACSS {
     createDirs(dirArray) {
         let self = this;
 
-        return new Promise(function(resolve, reject){
-            dirArray.map(function(dir, i){
-                self.createDir(dir).then(function(dirName){
+        return new Promise((resolve, reject)=>{
+            dirArray.map((dir, i)=>{
+
+                // Create utilities before utilities/lib if utilities isn't checked
+                if (dir == "utilities/lib") {
+                    if (dirArray.indexOf("utilities") == -1) {
+                        console.log("Created " + "utilitites".green + "...")
+                        self.createDir("utilities").then(()=>{}), (err)=>{
+                            if (err) { throw err; }
+                        });
+                    }
+                }
+
+                self.createDir(dir).then((dirName)=>{
                     console.log("Created " + dirName.green + "...");
 
                     if (i == dirArray.length - 1) {
                         resolve();
                     }
-                }, function(err){
+                }, (err)=>{
                     reject(err);
                 });
             });
         });
-    }
-
-
-    /**
-     *
-     */
-    removeDir(dir) {
-
     }
 
 
