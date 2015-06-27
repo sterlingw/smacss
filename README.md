@@ -1,8 +1,6 @@
 # smacss
 
-Scaffold out a sass directory structure using the SMACSS format.
-
-[![build status](https://secure.travis-ci.org/sterlingw/smacss.png)](http://travis-ci.org/sterlingw/smacss)
+CLI tool for scaffolding [SMACSS](https://github.com/minamarkham/sassy-starter) directory structures.
 
 ## Installation
 
