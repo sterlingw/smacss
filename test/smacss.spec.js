@@ -10,7 +10,6 @@ describe('SMACSS Class', ()=>{
 
     describe('createDir', ()=>{
         it('should return a promise', ()=>{
-            expect(true).toBe(true);
         });
     });
     
