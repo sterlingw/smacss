@@ -5,6 +5,9 @@ var fs     = require("fs"),
  *
  */
 explort default class SMACSS {
+    constructor(args) {
+
+    }
 
     /**
      *
@@ -21,6 +24,7 @@ explort default class SMACSS {
      *
      */
     createDirs(dirArray) {
+        if (dirArray) { return false; }
         let self = this;
 
         return new Promise((resolve, reject)=>{

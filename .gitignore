@@ -2,3 +2,10 @@
 .IDEA/
 node_modules/
 npm-debug.log
+base
+layout
+modules
+states
+themes
+utilities
+app.scss
