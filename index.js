@@ -17,6 +17,8 @@ var scaffoldChoices = [
 
 
 program.on('scaffold', function(){
+    console.log("");
+    console.log("Make sure you're in the correct directory.".red);
     inquirer.prompt([{
         type: "checkbox",
         message: "Select what directories you want scaffolded",

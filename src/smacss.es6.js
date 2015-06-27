@@ -4,13 +4,7 @@ var fs     = require("fs"),
 /**
  *
  */
-class SMACSS {
-
-
-    constructor(args) {
-        
-    }
-
+explort default class SMACSS {
 
     /**
      *
@@ -22,7 +16,6 @@ class SMACSS {
             });
         });
     }
-
 
     /**
      *
@@ -56,7 +49,4 @@ class SMACSS {
         });
     }
 
-
 };
-
-export default SMACSS;
