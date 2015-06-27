@@ -9,24 +9,21 @@ Scaffold out a sass directory structure using the SMACSS format.
 This module is installed via npm:
 
 ```
-$ npm install smacss
+$ npm install smacss -g
 ```
 
-## Example Usage
+## Usage
 
 Make sure you're in the right directory:
 ```
-$ mkdir scss
+$ mkdir sass && cd sass
 ```
 
+Run the command, you'll be prompted to decide what directories you want to scaffold:
 ```
-$ cd scss
+smacss scaffold
 ```
 
-Run the command:
-```
-smacss
-```
 
 ### License
 MIT. Copyright (c) [Sterling Whitley](http://sterlingw.com)
