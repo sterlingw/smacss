@@ -24,6 +24,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.2.4",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.37",
     "karma-browserify": "^4.2.1",
@@ -32,6 +33,7 @@
     "phantomjs": "^1.9.17"
   },
   "dependencies": {
+    "colors": "^1.1.2",
     "commander": "^2.8.1",
     "es6-promise": "^2.3.0",
     "inquirer": "^0.8.5"

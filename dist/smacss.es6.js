@@ -1,5 +1,5 @@
 var fs     = require("fs"),
-    color  = require('colors');
+    colors = require('colors');
 
 /**
  *
@@ -29,10 +29,11 @@ class SMACSS {
      */
     createDirs(dirArray) {
         let createDir = this.createDir;
-
+        
         dirArray.map(function(dir){
             createDir(dir).then(function(dirName){
-                console.log("Created " + dirName.green + "...");
+                console.log(typeof dirName);
+                console.log("Created " + dirName + "...");
             });
         });
     }

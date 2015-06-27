@@ -8,7 +8,8 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var fs = require("fs");
+var fs = require("fs"),
+    color = require("colors");
 
 /**
  *
@@ -39,9 +40,11 @@ var SMACSS = (function () {
          *
          */
         value: function createDirs(dirArray) {
+            var createDir = this.createDir;
+
             dirArray.map(function (dir) {
-                this.createDir(dir).then(function (dirName) {
-                    console.log("Created " + dirName + "...");
+                createDir(dir).then(function (dirName) {
+                    console.log("Created " + dirName.green + "...");
                 });
             });
         }

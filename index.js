@@ -15,9 +15,6 @@ var scaffoldChoices = [
 
 
 program.on('scaffold', function(){
-
-    console.log("\n Make sure you're in the right directory. \n");
-
     inquirer.prompt([{
         type: "checkbox",
         message: "Select what directories you want scaffolded",
@@ -32,8 +29,6 @@ program.on('scaffold', function(){
     }], function(answers) {
         smacss.createDirs(answers.scaffold);
     });
-    console.log("\n");
-
 });
 
 
@@ -52,7 +47,6 @@ program.on('destroy', function(){
             console.log("\nCancelling destroy.\n");
         }
     });
-    console.log("\n");
 });
 
 
