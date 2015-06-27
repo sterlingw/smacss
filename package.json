@@ -1,7 +1,7 @@
 {
   "name": "smacss",
-  "version": "0.0.1",
-  "description": "~",
+  "version": "1.0.0",
+  "description": "CLI tool for scaffolding SMACSS directory structures",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -11,10 +11,12 @@
     "url": "github.com/sterlingw/smacss"
   },
   "keywords": [
-    "background",
-    "background-changer",
-    "background",
-    "video"
+    "css",
+    "sass",
+    "scss",
+    "smacss",
+    "less",
+    "css scaffold"
   ],
   "author": "Sterling Whitley",
   "license": "MIT",
