@@ -6,13 +6,13 @@ var Promise  = require("es6-promise").Promise,
 
 
 var scaffoldChoices = [
-    { name: "base", checked: true },
-    { name: "layout", checked: true },
-    { name: "modules", checked: true },
-    { name: "states", checked: true },
-    { name: "themes", checked: true },
-    { name: "utilities", checked: true },
-    { name: "utilities/lib", checked: true }
+    { name: "base", checked: false },
+    { name: "layout", checked: false },
+    { name: "modules", checked: false },
+    { name: "states", checked: false },
+    { name: "themes", checked: false },
+    { name: "utilities", checked: false },
+    { name: "utilities/lib", checked: false }
 ];
 
 
