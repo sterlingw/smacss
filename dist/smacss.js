@@ -40,11 +40,19 @@ var SMACSS = (function () {
          *
          */
         value: function createDirs(dirArray) {
-            var createDir = this.createDir;
+            var self = this;
 
-            dirArray.map(function (dir) {
-                createDir(dir).then(function (dirName) {
-                    console.log("Created " + dirName.green + "...");
+            return new Promise(function (resolve, reject) {
+                dirArray.map(function (dir, i) {
+                    self.createDir(dir).then(function (dirName) {
+                        console.log("Created " + dirName.green + "...");
+
+                        if (i == dirArray.length - 1) {
+                            resolve();
+                        }
+                    }, function (err) {
+                        reject(err);
+                    });
                 });
             });
         }

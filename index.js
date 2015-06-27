@@ -7,10 +7,11 @@ var Promise  = require("es6-promise").Promise,
 
 var scaffoldChoices = [
     { name: "base", checked: true },
-    { name: "config", checked: true },
     { name: "layout", checked: true },
     { name: "modules", checked: true },
-    { name: "theme", checked: true }
+    { name: "states", checked: true },
+    { name: "themes", checked: true },
+    { name: "utilities", checked: true }
 ];
 
 
@@ -27,7 +28,11 @@ program.on('scaffold', function(){
         return true;
         }
     }], function(answers) {
-        smacss.createDirs(answers.scaffold);
+        smacss.createDirs(answers.scaffold).then(function(){
+            console.log("Done.".green);
+        }, function(err){
+            if (err) { throw err; }
+        });
     });
 });
 
@@ -35,16 +40,16 @@ program.on('scaffold', function(){
 program.on('destroy', function(){
     inquirer.prompt([{
         type: "confirm",
-        message: "Are you sure you want to destroy the SMACSS directories?",
+        message: "This will remove all SMACSS directories. Are you sure?",
         name: "bool",
         validate: function(answer) {
             return true;
         }
     }], function(answer) {
         if (answer.bool) {
-            console.log("\nDestroying...\n");
+            console.log("\nDestroying...\n".red);
         } else {
-            console.log("\nCancelling destroy.\n");
+            console.log("\nCancelling destroy.\n".green);
         }
     });
 });
